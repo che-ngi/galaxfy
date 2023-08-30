@@ -143,6 +143,7 @@ const TextSphere = () => {
                                 <div className="downloadTitle">Download your Musical Galaxy</div>
                                 <div>
                                     <button className="btn downloadButton" onClick={() => takePic(document.getElementById('sphereCont'))}> Save </button>
+                                    <p className="hint">Hint: Best used with Chrome</p>
                                 </div>
                             </>
                             )}
