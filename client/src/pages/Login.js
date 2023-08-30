@@ -3,7 +3,7 @@ import { Footer } from '../components'
 
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
-    ? 'http://localhost:8888/login'
+    ? 'https://galaxfy.herokuapp-29d1f426cf24.com/login'
     : 'https://galaxfy.herokuapp-29d1f426cf24.com/login';
 
 const openInNewTab = (name, map) => {

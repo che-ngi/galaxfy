@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8888;
 
 app.get('/', (req, res) => {
     const data = {
-        name: 'Aarond',
+        name: 'Aaron',
         isAwesome: true
     };
 
