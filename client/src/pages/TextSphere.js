@@ -23,10 +23,10 @@ const setTracksAndState = (topTracks, setActiveState, setTexts) => {
 }
 
 const takePic = (node) => {
-    htmlToImage.toPng(node, { quality: 1 })
+    htmlToImage.toJpeg(node, { quality: 1 })
   .then(function (dataUrl) {
     var link = document.createElement('a');
-    link.download = 'your-sphere.png';
+    link.download = 'your-sphere.jpeg';
     link.href = dataUrl;
     link.click();
   });
