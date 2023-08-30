@@ -1,1 +1,1 @@
-web: npm run start-server asd
+web: npm run start-server
