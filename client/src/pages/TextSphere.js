@@ -7,12 +7,17 @@ import { TagCloud } from "@frank-mayer/react-tag-cloud";
 import * as htmlToImage from 'html-to-image';
 import spotifyLogo from "../spotifyLogo.png"
 
+
+const isDesktop = () => {
+    return (window.screen.width > 1024)
+}
+
 const openInNewTab = (name, map) => {
     let url = map.get(name);
         window.open(url, "_blank", "noreferrer");
   };
 
-const setArtistsAndState= (topArtists, setActiveState, setTexts) => {
+const setArtistsAndState = (topArtists, setActiveState, setTexts) => {
     setActiveState("artists")
     setTexts(topArtists)
 }
@@ -59,6 +64,7 @@ const TextSphere = () => {
     };
   
     useEffect(() => {
+        isDesktop()
       let artistNames = [];
       let trackNames = [];
       let artistMap = new Map();
@@ -132,10 +138,14 @@ const TextSphere = () => {
                                 <input type="radio" class="topInput" id="long" name="topButtons" value="long"/>
                                 <label for="long" className={activeRange === 'long' ? 'btn topButtons' : 'btn'} onClick={() => setActiveRange('long')}>All Time</label>
                             </div>
-                            <div className="downloadTitle">Download your Musical Galaxy</div>
-                            <div>
-                                <button className="btn downloadButton" onClick={() => takePic(document.getElementById('sphereCont'))}> Save </button>
-                            </div>
+                            {isDesktop() && (
+                            <>
+                                <div className="downloadTitle">Download your Musical Galaxy</div>
+                                <div>
+                                    <button className="btn downloadButton" onClick={() => takePic(document.getElementById('sphereCont'))}> Save </button>
+                                </div>
+                            </>
+                            )}
                         </div>
                 </div>
                 <Footer></Footer>
