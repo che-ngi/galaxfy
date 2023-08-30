@@ -1,0 +1,468 @@
+/* Importing google font  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:wght@300;500&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-weight: normal;
+}
+h2 {
+    font-weight: bold;
+}
+
+a {
+    color: #36005d;
+}
+input {
+    display: none;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 500;
+}
+.footerName {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+.footerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 250px;   
+}
+.top {
+    width: 100%;
+    height: 100vh;
+    background: rgb(183,177,247);
+    background: linear-gradient(148deg, rgba(183,177,247,1) 0%, rgb(183, 58, 240) 90%);
+}
+
+.sphereCont {
+    padding: 20px;
+    flex-direction: column;
+    width: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-sphere {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 0;
+    align-items: center;
+}
+
+.tagcloud {
+    box-shadow: 0 0 20px #0e0e0e;    
+    padding-top: 10px;
+    border-radius: 100%;
+    background-color: rgb(29, 29, 29);
+    background-image: url("../galaxy.jpeg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.0625em;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.tagcloud--item:hover {
+    color: #00ff2f;
+}
+
+.spotifyLogo {
+    height: 20px;
+    width: auto;
+    margin: 10px;
+}
+.sphereCaption {
+    font-size: 0.8em;
+    font-family: "Lilita One";
+}
+
+.header {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+}
+
+.container {
+    
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.title {
+    font-size: 2.2em;
+    color: white;
+    font-family: "Lilita One";
+    text-shadow: #36005d 2px 2px;
+
+}
+
+.logout {
+    position: absolute;
+    right: 0;
+    margin-right: 5vw;
+}
+
+.logoutCont {
+    transition: all 0.3s ease;
+    color: inherit;
+    position: absolute;
+    right: 0;
+    margin-right: 1em;
+
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #edc8ff;
+    border: 2px solid #36005d;
+    border-radius: 100%;
+    box-shadow: #36005d 4px 4px 0 0;
+    color: #0c0042;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.logoutIcon {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+
+}
+
+.buttonCont {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 27vw;
+}
+.timeFrameTitle, .betweenTitle, .downloadTitle {
+    font-family: "Lilita One";
+    display: flex;
+    text-align: center;
+    align-items: left;
+    justify-content:flex-start;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.timeFrameTitle, .downloadTitle {
+    margin-top: 50px;
+}
+.timeFrameCont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.trackArtistCont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+svg {
+    color: red;
+}
+
+.btn {
+    transition: all 0.3s ease;
+    color: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    vertical-align: middle;
+    width: 8em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #e4afff;
+    border: 2px solid #36005d;
+    border-radius: 30px;
+    box-shadow: #36005d 4px 4px 0 0;
+    color: #0c0042;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0 18px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: "Inter";
+    touch-action: manipulation;
+}
+
+.btn:active, .loginSpotify:active {
+  box-shadow: #240042 2px 2px 0 0;
+  transform: translate(2px, 2px);
+  background-color: #7500c8;
+}
+
+.btn:checked {
+    background-color: #7500c8;
+}
+
+.topInput:checked + .btn {
+    color: white;
+}
+
+.botInput:checked + .btn {
+    color: white;
+}
+
+
+.botButtons, .topButtons {
+    background-color: #7500c8;
+    color: white;
+}
+.downloadButton {
+    width: 15em;
+}
+
+.botButtons:hover, .logoutCont:hover, .topButtons:hover, .btn:hover, .loginSpotify:hover, .downloadButton:hover {
+    background-color: #b262e7;
+    color: white;
+}
+
+.botButtons:active, .logoutCont:active, .topButtons:active, .downloadButton:active {
+  box-shadow: #240042 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+
+.bottomCont {
+       display: flex;
+       justify-content: space-evenly;
+       position: relative;
+       top: 0;
+       align-items: center;
+}
+
+.loginCont {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 27vw;
+}
+
+.startAndLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginCaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-family: "Inter";
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.loginSpotify {
+    font-size: 1.5em;
+    vertical-align: middle;
+    width: 10em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #e4afff;
+    border: 2px solid #36005d;
+    border-radius: 30px;
+    box-shadow: #36005d 4px 4px 0 0;
+    color: #0c0042;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0 18px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: "Inter";
+    touch-action: manipulation;
+}
+.loginSpotify:hover {
+    text-decoration: none;
+}
+.infoText {
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 2em;
+}
+.loginCaption {
+    font-size: 2em;
+}
+
+/* CONTACT PAGE */
+.contactTitle {
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+.contactCont {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contactInfo {
+    font-size: 1.2em;
+    display: block;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+
+@media (max-width: 1000px) {
+    .top {
+        position: relative;
+        min-height: 100vh;
+        height: auto;
+    }
+    footer {
+        display: flex;
+        bottom: 0;
+        height: 10vh;
+        width: 100%;
+    }
+    .buttonCont {
+        margin-top: 1.5em;
+        width: 100%;
+        text-align: center;
+    }
+    .text-sphere {
+        flex-direction: column;
+    }
+    .btn {
+        font-size: 1.2em;
+        width: 6em;
+        height: 3em;
+    }
+    .downloadButton {
+        font-size: 1.2em;
+        width: 15em;
+    }
+    .timeFrameTitle, .betweenTitle, .downloadTitle {
+        font-size: 1.5em;
+    }
+    .bottomCont {
+        flex-direction: column;
+
+    }
+    .infoCont {
+        margin-top: 1em;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        padding: 25px;
+        height: 30vh;
+    }
+    .infoText {
+        font-size: 1.6em;
+    }
+    .loginCont {
+        height: 20em;
+        width: 90vw;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .loginCaption {
+        width: 100vw;
+    }
+    .loginSpotify {
+        font-size: 1.2em;
+        height: 3em;
+    }
+    .contactInfo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  } 
+
+@media (max-width: 550px) {
+    .buttonCont {
+        margin-top: 1em;
+    }
+    .text-sphere {
+        flex-direction: column;
+    }
+    .btn {
+        font-size: 0.8em;
+        width: 6em;
+        height: 3em;
+    }
+    .downloadButton {
+        font-size: 0.8em;
+        width: 12em;
+    }
+    .timeFrameTitle, .betweenTitle, .downloadTitle {
+        font-size: 1.0em;
+    }
+  } 
+@media (max-width: 350px) {
+    .tagcloud--item {
+        font-size: 0.5em;
+    }
+}
+
+
+  @media (min-width: 1001px) {
+    .tagcloud {
+        font-size: 1.5em;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 20px;
+        width: 100vw;
+    }
+  }
+
+            
