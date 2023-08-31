@@ -42,7 +42,6 @@ app.get('/login', (req, res) => {
     res.cookie(stateKey, state);
 
     const scope = [
-        'user-read-private',
          'user-read-email',
           'user-top-read'
     ].join(' ');

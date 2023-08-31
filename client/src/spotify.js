@@ -135,15 +135,6 @@ axios.defaults.headers['Content-Type'] = 'application/json';
  */
 export const getCurrentUserProfile = () => axios.get('/me');
 
-/**
- * Get a List of Current User's Playlists
- * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-a-list-of-current-users-playlists
- * @returns {Promise}
- */
-export const getCurrentUserPlaylists = (limit = 20) => {
-    return axios.get(`/me/playlists?limit=${limit}`);
-  };
-
   /**
  * Get a User's Top Artists and Tracks
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-users-top-artists-and-tracks
@@ -163,13 +154,3 @@ export const getTopArtists = (time_range = 'short_term') => {
  export const getTopTracks = (time_range = 'short_term') => {
     return axios.get(`/me/top/tracks?time_range=${time_range}`);
   };
-
-  /**
- * Get a Playlist
- * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist
- * @param {string} playlist_id - The Spotify ID for the playlist.
- * @returns {Promise}
- */
-export const getPlaylistById = playlist_id => {
-    return axios.get(`/playlists/${playlist_id}`);
-  }
