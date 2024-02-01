@@ -22,7 +22,7 @@ const Login = () => (
                         , my‏‏‎ ‎
                         <a href="https://www.instagram.com/che.ngi/" target="_blank" rel="noreferrer">Instagram</a>
                         , or check out my‏‏‎ ‎
-                        <a href="https://aaroncheng.tech/" target="_blank" rel="noreferrer">website!</a>
+                        <a href="https://aaroncheng.dev/" target="_blank" rel="noreferrer">website!</a>
                     </p>
 
                 </div>

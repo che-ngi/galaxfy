@@ -4,7 +4,7 @@ const Footer = () => (
     <footer className="footer"> 
         <div className="footerName">
             Created by‏‏‎ ‎ 
-            <a href="http://aaroncheng.tech" target="_blank"> Aaron Cheng</a>
+            <a href="http://aaroncheng.dev" target="_blank"> Aaron Cheng</a>
         </div>
         <div className="footerInfo">
             <Link to="/">Home</Link>
