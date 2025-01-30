@@ -70,7 +70,7 @@ const TextSphere = () => {
       let artistMap = new Map();
       let trackMap = new Map();
       const fetchData = async () => {
-        const artists = await getTopArtists(`${activeRange}_term`);
+        const artists = await getTopArtists(`${activeRange}_term`);     
         const tracks = await getTopTracks(`${activeRange}_term`);
         setTopArtists(artists.data);
         for (let i = 0; i < artists.data.items.length / 2; i++) {
